@@ -1,0 +1,11 @@
+# 传输层用 curl_cffi 而非 requests：需要 HTTP/2 + Chrome 的伪头顺序与 TLS(JA3) 指纹
+curl_cffi>=0.15.0
+websocket-client>=1.9.0
+brotli>=1.1.0
+qrcode>=8.0
+cryptography>=44.0.0
+# 极验 v3 点选：YOLO 检测、CTC 概率向量匹配、匈牙利指派
+ddddocr>=1.6.1
+numpy>=2.0.0
+scipy>=1.14.0
+Pillow>=11.0.0

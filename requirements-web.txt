@@ -1,0 +1,6 @@
+Flask>=3.1,<4
+waitress>=3,<4
+curl_cffi>=0.15
+brotli>=1.1
+qrcode[pil]>=8
+cryptography>=44
