@@ -42,7 +42,7 @@ class IdentityTests(unittest.TestCase):
   self.verify.side_effect=lambda _: {'id':2,'username':'user-2','app_access':{'bilibiliapis':False}}
   self.assertEqual(self.client.get('/api/meta').status_code,403)
   response=self.client.get('/');self.assertEqual(response.status_code,302)
-  self.assertIn('view=access&app=bilibiliapis',response.headers['Location'])
+  self.assertIn('/permissions?app=bilibiliapis',response.headers['Location'])
  def test_missing_permission_claims_fail_closed(self):
   self.login(1);self.verify.side_effect=lambda _: {'id':1,'username':'user-1'}
   self.assertEqual(self.client.get('/api/meta').status_code,403)
